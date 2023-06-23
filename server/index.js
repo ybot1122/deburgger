@@ -2,6 +2,7 @@ const express = require('express');
 const { genericAnalysis } = require('./azure/genericAnalysis');
 const { analyzeSentiment } = require('./azure/analyzeSentiment');
 const cors = require('cors');
+const analyzeConversations = require('./azure/analyzeConversations');
 const app = express();
 const port = 3001;
 
@@ -23,6 +24,13 @@ app.get('/genericAnalysis', async (req, res) => {
 app.get('/sentimentAnalysis', async (req, res) => {
   const text = req.query.text;
   const result = await analyzeSentiment(text);
+
+  res.status(200).send(result);
+});
+
+app.get('/conversationsAnalysis', async (req, res) => {
+  const text = req.query.text;
+  const result = await analyzeConversations(text);
 
   res.status(200).send(result);
 });

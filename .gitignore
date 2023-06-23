@@ -24,3 +24,4 @@ yarn-error.log*
 
 cognitiveSecret.ts
 cognitiveSecret.js
+opcApimSubscriptionKey.js
