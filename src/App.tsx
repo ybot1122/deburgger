@@ -1,9 +1,10 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
 import { themeClass } from "./theme.css";
 import * as css from "./App.css";
 import classNames from "classnames";
 import { SentimentAnalysisSection } from "./components/SentimentAnalysis/SentimentAnalysis";
+import { ChatWindowUserInputSubmit } from "./components/ChatWindowUserInputSubmit/ChatWindowUserInputSubmit";
 
 type Message = {
   from: "user" | "bot";
@@ -60,18 +61,7 @@ const App = () => {
 
       <div className={css.chatWindow}>
         <div className={css.chatMessageWindow}>{messagesRendered}</div>
-
-        <form onSubmit={onSubmit}>
-          <input
-            type="text"
-            ref={inputRef}
-            className={css.userInput}
-            placeholder="type message here"
-          />
-          <button type="submit" className={css.userInputSubmit}>
-            Submit
-          </button>
-        </form>
+        <ChatWindowUserInputSubmit onSubmit={onSubmit} inputRef={inputRef} />
       </div>
       <SentimentAnalysisSection text={lastUserMsg} />
     </div>

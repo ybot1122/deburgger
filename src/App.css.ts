@@ -57,17 +57,6 @@ export const chatWindow = style({
   padding: "15px",
 });
 
-export const userInput = style({
-  width: "320px",
-  margin: "5px",
-  padding: "5px",
-});
-
-export const userInputSubmit = style({
-  width: "100%",
-  textAlign: "center",
-});
-
 export const chatMessageWindow = style({
   width: "100%",
   height: "420px",
