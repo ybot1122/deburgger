@@ -12,8 +12,10 @@ const MessageBubble = ({
   messageInd: number;
 }) => {
   return (
-    <div key={messageInd} className={from === "user" ? css.left : css.right}>
-      <div className={css.msgInner}>{text}</div>
+    <div key={messageInd} className={css.msgOuter}>
+      <div className={from === "bot" ? css.msgInnerBot : css.msgInnerUser}>
+        <div className={css.msgInner}>{text}</div>
+      </div>
     </div>
   );
 };

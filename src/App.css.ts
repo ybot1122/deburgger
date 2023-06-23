@@ -63,4 +63,6 @@ export const chatMessageWindow = style({
   border: "1px gray dashed",
   background: vars.colors.emphasis,
   overflowY: "scroll",
+  padding: "0",
+  margin: "0",
 });

@@ -1,21 +1,26 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../theme.css";
 
-export const left = style({
+export const msgOuter = style({
   width: "100%",
   textAlign: "left",
 });
 
-export const right = style({
-  textAlign: "right",
+export const msgInnerUser = style({
+  width: "50%",
+  margin: "15px auto 15px 0",
+});
+
+export const msgInnerBot = style({
+  width: "50%",
+  margin: "15px 0 15px auto",
 });
 
 export const msgInner = style({
-  width: "40%",
+  margin: "5px 10px 5px 10px",
   border: "1px solid",
   borderColor: vars.colors.accent,
-  margin: "15px",
-  padding: "15px",
   borderRadius: "15px",
   fontWeight: "bold",
+  padding: "15px",
 });

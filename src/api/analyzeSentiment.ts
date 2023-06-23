@@ -33,8 +33,6 @@ const analyzeSentiment = async (text: string) => {
 
   const results = await client.analyzeSentiment([text]);
 
-  console.log(results[0]);
-
   return {
     text,
     ...results[0],
