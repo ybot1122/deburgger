@@ -3,18 +3,9 @@ import React from "react";
 import { themeClass } from "./theme.css";
 import * as css from "./App.css";
 import classNames from "classnames";
-import { analyzeSentiment } from "./api/analyzeSentiment";
+import { SentimentAnalysisSection } from "./components/SentimentAnalysis/SentimentAnalysis";
 
 const App = () => {
-
-  const sentimentAnalysisInput = React.useRef<HTMLInputElement>(null);
-
-  const onSubmitSentimentAnalysis = React.useCallback(() => {
-    if (sentimentAnalysisInput?.current?.value) {
-      analyzeSentiment(sentimentAnalysisInput?.current?.value);
-    }
-  }, []);
-
   return (
     <div className={classNames(themeClass, css.app)}>
       <header className={css.title}>
@@ -23,10 +14,7 @@ const App = () => {
         <div id="front-cover" className={css.frontCover}>
           Hi I am Deburgger
         </div>
-        <div>
-          <h2>Sentiment Analysis</h2>
-          <input type="text" ref={sentimentAnalysisInput} /><button type="submit" onClick={onSubmitSentimentAnalysis}>Submit</button>
-        </div>
+        <SentimentAnalysisSection />
     </div>
   );
 };
