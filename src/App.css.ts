@@ -16,6 +16,7 @@ export const app = style({
 });
 
 export const title = style({
+  paddingTop: "15px",
   textAlign: "center",
 });
 
@@ -53,7 +54,6 @@ export const spacer = style({
 export const chatWindow = style({
   maxWidth: "420px",
   textAlign: "center",
-  border: "1px black solid",
   margin: "15px auto",
   padding: "15px",
 });
