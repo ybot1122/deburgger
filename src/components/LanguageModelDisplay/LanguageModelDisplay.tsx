@@ -1,14 +1,19 @@
 import React from "react";
-import { analyzeSentiment } from "../../api/analyzeSentiment";
-import * as css from "./SentimentAnalysis.css";
+import * as css from "./LanguageModelDisplay.css";
 import JSONPretty from "react-json-pretty";
 
-const SentimentAnalysisSection = ({ text }: { text: string }) => {
+const LanguageModelDisplay = ({
+  text,
+  analysisCb,
+}: {
+  text: string;
+  analysisCb: (text: string) => Promise<any>;
+}) => {
   const [results, setResults] = React.useState({});
 
   React.useEffect(() => {
     const analyze = async () => {
-      const r = await analyzeSentiment(text);
+      const r = await analysisCb(text);
       setResults(r);
     };
     if (text) {
@@ -26,4 +31,4 @@ const SentimentAnalysisSection = ({ text }: { text: string }) => {
   );
 };
 
-export { SentimentAnalysisSection };
+export { LanguageModelDisplay };

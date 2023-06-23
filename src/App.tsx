@@ -3,9 +3,10 @@ import React, { useEffect } from "react";
 import { themeClass } from "./theme.css";
 import * as css from "./App.css";
 import classNames from "classnames";
-import { SentimentAnalysisSection } from "./components/SentimentAnalysis/SentimentAnalysis";
+import { LanguageModelDisplay } from "./components/LanguageModelDisplay/LanguageModelDisplay";
 import { ChatWindowUserInputSubmit } from "./components/ChatWindowUserInputSubmit/ChatWindowUserInputSubmit";
 import { MessageBubble } from "./components/MessageBubble/MessageBubble";
+import { analyzeSentiment } from "./api/analyzeSentiment";
 
 type Message = {
   from: "user" | "bot";
@@ -70,7 +71,8 @@ const App = () => {
         <div className={css.chatMessageWindow}>{messagesRendered}</div>
         <ChatWindowUserInputSubmit onSubmit={onSubmit} inputRef={inputRef} />
       </div>
-      <SentimentAnalysisSection text={lastUserMsg} />
+      <LanguageModelDisplay text={lastUserMsg} analysisCb={analyzeSentiment} />
+      <LanguageModelDisplay text={lastUserMsg} analysisCb={analyzeSentiment} />
     </div>
   );
 };
