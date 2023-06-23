@@ -1,8 +1,13 @@
 const express = require('express');
 const { genericAnalysis } = require('./azure/genericAnalysis');
 const { analyzeSentiment } = require('./azure/analyzeSentiment');
+const cors = require('cors');
 const app = express();
 const port = 3001;
+
+app.use(cors({
+  origin: ['http://localhost:3000']
+}));
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
