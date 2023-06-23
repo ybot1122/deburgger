@@ -23,13 +23,22 @@ import { cognitiveSecret } from "./cognitiveSecret";
 const endpoint = "https://deburgger.cognitiveservices.azure.com/";
 const apiKey = cognitiveSecret;
 
-const analyzeSentiment = async (text: string) => {
+const analyzeSentiment = async (text: string, includeOpinionMining = false) => {
   const client = new TextAnalyticsClient(
     endpoint,
     new AzureKeyCredential(apiKey)
   );
 
-  const results = await client.analyzeSentiment([text]);
+  const results = await client.analyzeSentiment(
+    [
+      {
+        id: "0",
+        language: "en",
+        text,
+      },
+    ],
+    { includeOpinionMining }
+  );
 
   return {
     text,

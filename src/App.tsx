@@ -77,6 +77,12 @@ const App = () => {
         analysisCb={analyzeSentiment}
         header="Sentiment Analysis"
       />
+
+      <LanguageModelDisplay
+        text={lastUserMsg}
+        analysisCb={(text) => analyzeSentiment(text, true)}
+        header="Sentiment Analysis with Opinion Mining"
+      />
       <LanguageModelDisplay
         text={lastUserMsg}
         analysisCb={extractKeyPhrases}

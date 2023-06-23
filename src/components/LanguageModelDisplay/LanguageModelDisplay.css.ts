@@ -11,10 +11,8 @@ export const container = style({
 });
 
 export const header = style({
-  display: "flex",
   width: "100%",
-  flexBasis: "100%",
   margin: 0,
   padding: 0,
-  justifyContent: "center",
+  overflowX: "scroll",
 });
