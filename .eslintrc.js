@@ -21,9 +21,9 @@ module.exports = {
     {
       files: ["**"],
       rules: {
-      "max-len": "off"
+        "max-len": "off",
       },
-    }
+    },
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {

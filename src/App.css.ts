@@ -2,8 +2,8 @@ import { style } from "@vanilla-extract/css";
 import { vars } from "./theme.css";
 
 export const app = style({
-  maxWidth: '1024px',
-  margin: 'auto',
+  maxWidth: "1024px",
+  margin: "auto",
   color: vars.colors.secondary,
   background: vars.colors.primary,
   fontFamily: vars.fontFamily,

@@ -1,21 +1,20 @@
 import React from "react";
 import { analyzeSentiment } from "../../api/analyzeSentiment";
-import * as css from './SentimentAnalysis.css'
-import JSONPretty from 'react-json-pretty';
+import * as css from "./SentimentAnalysis.css";
+import JSONPretty from "react-json-pretty";
 
-const SentimentAnalysisSection = ({text}: {text: string}) => {
+const SentimentAnalysisSection = ({ text }: { text: string }) => {
   const [results, setResults] = React.useState({});
 
   React.useEffect(() => {
     const analyze = async () => {
-        const r = await analyzeSentiment(text);
-        setResults(r);
-    }
+      const r = await analyzeSentiment(text);
+      setResults(r);
+    };
     if (text) {
       analyze();
     }
-
-  }, [text])
+  }, [text]);
 
   return (
     <div className={css.container}>
@@ -23,11 +22,8 @@ const SentimentAnalysisSection = ({text}: {text: string}) => {
       <div className={css.header}>
         <JSONPretty data={results} />
       </div>
-  </div>
-
+    </div>
   );
-}
+};
 
-export {
-  SentimentAnalysisSection
-}
+export { SentimentAnalysisSection };
