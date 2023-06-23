@@ -28,7 +28,6 @@ const genericAnalysis = async (text) => {
     recognizePiiEntitiesActions: [{ modelVersion: "latest" }],
     extractKeyPhrasesActions: [{ modelVersion: "latest" }],
     recognizeLinkedEntitiesActions: [{modelVersion: "latest"}],
-    analyzeSentimentActions: [{modelVersion: "latest"}],
   };
   const poller = await client.beginAnalyzeActions(documents, actions, "en", {
     includeStatistics: true,

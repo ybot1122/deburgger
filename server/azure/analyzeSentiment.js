@@ -13,17 +13,17 @@
  * source: https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/textanalytics/ai-text-analytics/samples/v5/typescript/src/analyzeSentiment.ts
  */
 
-import {
+const {
   TextAnalyticsClient,
   AzureKeyCredential,
-} from "@azure/ai-text-analytics";
-import { cognitiveSecret } from "./cognitiveSecret";
+} = require("@azure/ai-text-analytics");
+const { cognitiveSecret } = require("./cognitiveSecret");
 
 // You will need to set these environment variables or edit the following values
 const endpoint = "https://deburgger.cognitiveservices.azure.com/";
 const apiKey = cognitiveSecret;
 
-const analyzeSentiment = async (text: string, includeOpinionMining = false) => {
+const analyzeSentiment = async (text, includeOpinionMining = true) => {
   const client = new TextAnalyticsClient(
     endpoint,
     new AzureKeyCredential(apiKey)
@@ -46,4 +46,4 @@ const analyzeSentiment = async (text: string, includeOpinionMining = false) => {
   };
 };
 
-export { analyzeSentiment };
+module.exports = { analyzeSentiment };
