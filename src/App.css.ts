@@ -51,24 +51,27 @@ export const spacer = style({
 });
 
 export const chatWindow = style({
-  display: 'flex',
-  justifyContent: 'center',
-  border: '1px black solid',
-  margin: '15px',
-  padding: '15px',
-})
-
-export const userInput = style ({
-  display: 'flex',
-  flexBasis: '100%',
-  width: '320px',
-  margin: '5px',
-  justifyContent: 'center',
-  padding: '5px'
+  textAlign: "center",
+  border: "1px black solid",
+  margin: "15px",
+  padding: "15px",
 });
 
-export const userInputSubmit = style ({
-  width: '100%',
-  display: 'flex',
-  justifyContent: 'center',
+export const userInput = style({
+  width: "320px",
+  margin: "5px",
+  justifyContent: "center",
+  padding: "5px",
+});
+
+export const userInputSubmit = style({
+  width: "100%",
+  textAlign: "center",
+});
+
+export const chatMessageWindow = style({
+  width: "100%",
+  height: "420px",
+  border: "1px gray dashed",
+  background: vars.colors.emphasis,
 });
