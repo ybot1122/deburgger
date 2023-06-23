@@ -8,6 +8,7 @@ import { ChatWindowUserInputSubmit } from "./components/ChatWindowUserInputSubmi
 import { MessageBubble } from "./components/MessageBubble/MessageBubble";
 import { analyzeSentiment } from "./api/analyzeSentiment";
 import { extractKeyPhrases } from "./api/extractKeyPhrases";
+import { recognizeEntities } from "./api/recognizeEntities";
 
 type Message = {
   from: "user" | "bot";
@@ -87,6 +88,11 @@ const App = () => {
         text={lastUserMsg}
         analysisCb={extractKeyPhrases}
         header="Extract Key Phrases"
+      />
+      <LanguageModelDisplay
+        text={lastUserMsg}
+        analysisCb={recognizeEntities}
+        header="Named Entity Recognition"
       />
     </div>
   );
