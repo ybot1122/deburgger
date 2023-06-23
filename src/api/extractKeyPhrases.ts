@@ -18,35 +18,15 @@ import { cognitiveSecret } from "./cognitiveSecret";
 const endpoint = "https://deburgger.cognitiveservices.azure.com/";
 const apiKey = cognitiveSecret;
 
-const documents = [
-  "Redmond is a city in King County, Washington, United States, located 15 miles east of Seattle.",
-  "I need to take my cat to the veterinarian.",
-  "I will travel to South America in the summer.",
-];
-
-export async function main() {
-  console.log("== Extract Key Phrases Sample ==");
-
+const extractKeyPhrases = async (text: string) => {
   const client = new TextAnalyticsClient(
     endpoint,
     new AzureKeyCredential(apiKey)
   );
 
-  const results = await client.extractKeyPhrases(documents);
+  const results = await client.extractKeyPhrases([text]);
 
-  for (const result of results) {
-    console.log(`- Document ${result.id}`);
-    if (!result.error) {
-      console.log("\tKey phrases:");
-      for (const phrase of result.keyPhrases) {
-        console.log(`\t- ${phrase}`);
-      }
-    } else {
-      console.error("  Error:", result.error);
-    }
-  }
-}
+  return results;
+};
 
-main().catch((err) => {
-  console.error("The sample encountered an error:", err);
-});
+export { extractKeyPhrases };

@@ -24,8 +24,6 @@ const endpoint = "https://deburgger.cognitiveservices.azure.com/";
 const apiKey = cognitiveSecret;
 
 const analyzeSentiment = async (text: string) => {
-  console.log("=== Analyze Sentiment Sample ===");
-
   const client = new TextAnalyticsClient(
     endpoint,
     new AzureKeyCredential(apiKey)

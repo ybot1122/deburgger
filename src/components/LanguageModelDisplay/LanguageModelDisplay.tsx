@@ -5,8 +5,10 @@ import JSONPretty from "react-json-pretty";
 const LanguageModelDisplay = ({
   text,
   analysisCb,
+  header,
 }: {
   text: string;
+  header: string;
   analysisCb: (text: string) => Promise<any>;
 }) => {
   const [results, setResults] = React.useState({});
@@ -23,7 +25,7 @@ const LanguageModelDisplay = ({
 
   return (
     <div className={css.container}>
-      <h2 className={css.header}>Sentiment Analysis</h2>
+      <h2 className={css.header}>{header}</h2>
       <div className={css.header}>
         <JSONPretty data={results} />
       </div>
