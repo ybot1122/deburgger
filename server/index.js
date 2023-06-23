@@ -9,9 +9,9 @@ app.get('/', (req, res) => {
 
 app.get('/genericAnalysis', async (req, res) => {
   const text = req.query.text;
-  await genericAnalysis(text);
+  const result = await genericAnalysis(text);
 
-  res.send(200);
+  res.status(200).send(result);
 });
 
 app.listen(port, () => {
