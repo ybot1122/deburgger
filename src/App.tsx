@@ -14,22 +14,16 @@ type Message = {
 };
 
 const App = () => {
-  const messages = React.useRef<Message[]>([]);
+  const messages = React.useRef<Message[]>([
+    {
+      from: "bot",
+      text: "Hi, welcome to Deburgger. I can help you with anything related to burgers. Cooking? Eating? Just plain love em?",
+      messageInd: -1,
+    },
+  ]);
   const inputRef = React.useRef<HTMLInputElement>(null);
   const [numMessages, setNumMessages] = React.useState(0);
   const [lastUserMsg, setLastUserMsg] = React.useState("");
-
-  // Initial message from the bot
-  useEffect(() => {
-    const initialMessage =
-      "Hi, welcome to Deburgger. I can help you with anything related to burgers. Cooking? Eating? Just plain love em?";
-    messages.current.push({
-      from: "bot",
-      text: initialMessage,
-      messageInd: numMessages,
-    });
-    setNumMessages(numMessages + 1);
-  }, []);
 
   const onSubmit = React.useCallback(
     (e: any) => {
