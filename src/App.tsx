@@ -8,6 +8,7 @@ import { ChatWindowUserInputSubmit } from "./components/ChatWindowUserInputSubmi
 import { MessageBubble } from "./components/MessageBubble/MessageBubble";
 import { analyzeSentiment } from "./api/analyzeSentiment";
 import { useDeburggerBot } from "./hooks/useDeburggerBot";
+import { genericAnalysis } from "./api/genericAnalysis";
 
 type Message = {
   from: "user" | "bot";
@@ -110,6 +111,11 @@ const App = () => {
         text={lastUserMsg}
         analysisCb={analyzeSentiment}
         header="Sentiment Analysis"
+      />
+      <LanguageModelDisplay
+        text={lastUserMsg}
+        analysisCb={genericAnalysis}
+        header="Generic Analysis"
       />
     </div>
   );
