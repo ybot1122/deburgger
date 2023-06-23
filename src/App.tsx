@@ -17,6 +17,7 @@ type Message = {
 };
 
 const App = () => {
+  const chatWindowRef = React.useRef<HTMLDivElement>(null);
   const messages = React.useRef<Message[]>([
     {
       from: "bot",
@@ -49,6 +50,13 @@ const App = () => {
     [numMessages]
   );
 
+  // Scroll to bottom whenever new message is sent.
+  React.useEffect(() => {
+    if (chatWindowRef?.current?.scrollHeight) {
+      chatWindowRef.current.scrollTop = chatWindowRef.current.scrollHeight;
+    }
+  }, [numMessages]);
+
   const messagesRendered = messages.current.map((m) => {
     return (
       <MessageBubble
@@ -70,7 +78,9 @@ const App = () => {
       </div>
 
       <div className={css.chatWindow}>
-        <div className={css.chatMessageWindow}>{messagesRendered}</div>
+        <div className={css.chatMessageWindow} ref={chatWindowRef}>
+          {messagesRendered}
+        </div>
         <ChatWindowUserInputSubmit onSubmit={onSubmit} inputRef={inputRef} />
       </div>
       <LanguageModelDisplay
