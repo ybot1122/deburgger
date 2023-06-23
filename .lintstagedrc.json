@@ -1,6 +1,6 @@
 {
-  "*.ts": ["npm run prettier"],
-  "*.tsx": ["npm run prettier"],
-  "*.html": ["npm run prettier"],
-  "*.scss": "npm run prettier"
+  "*.ts": ["prettier --write", "eslint --fix"],
+  "*.tsx": ["eslint --fix", "prettier --write"],
+  "*.html": ["eslint --fix", "prettier --write"],
+  "*.scss": "prettier --write"
 }
