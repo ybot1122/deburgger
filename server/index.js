@@ -2,7 +2,7 @@ const express = require('express');
 const { genericAnalysis } = require('./azure/genericAnalysis');
 const { analyzeSentiment } = require('./azure/analyzeSentiment');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
