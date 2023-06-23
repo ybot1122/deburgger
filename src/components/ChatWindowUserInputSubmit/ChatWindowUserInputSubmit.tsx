@@ -35,7 +35,7 @@ const ChatWindowUserInputSubmit = ({
       >
         Submit
       </button>
-      {isDisabled && <p>Deburrger bot is responding...</p>}
+      {isDisabled && <p>Deburgger bot is responding...</p>}
     </form>
   );
 };

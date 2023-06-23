@@ -31,8 +31,24 @@ const App = () => {
   const [numMessages, setNumMessages] = React.useState(0);
   const [lastUserMsg, setLastUserMsg] = React.useState("");
 
-  const { onUserInput, isResponding } = useDeburggerBot();
+  const latestBotMessage = React.useRef("");
+  const { onUserInput, isResponding, lastBotMessage } = useDeburggerBot();
 
+  // Update message chain when bot responds
+  React.useEffect(() => {
+    if (latestBotMessage.current === lastBotMessage) return;
+
+    messages.current.push({
+      from: "bot",
+      text: lastBotMessage,
+      messageInd: numMessages,
+    });
+
+    setNumMessages(numMessages + 1);
+    latestBotMessage.current = lastBotMessage;
+  }, [lastBotMessage, numMessages]);
+
+  // Handle user input submit
   const onSubmit = React.useCallback(
     (e: any) => {
       e.preventDefault();
@@ -62,6 +78,7 @@ const App = () => {
     }
   }, [numMessages]);
 
+  // Render all the messages
   const messagesRendered = messages.current.map((m) => {
     return (
       <MessageBubble
