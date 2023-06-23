@@ -86,7 +86,11 @@ const App = () => {
         <div className={css.chatMessageWindow} ref={chatWindowRef}>
           {messagesRendered}
         </div>
-        <ChatWindowUserInputSubmit onSubmit={onSubmit} inputRef={inputRef} />
+        <ChatWindowUserInputSubmit
+          onSubmit={onSubmit}
+          inputRef={inputRef}
+          isDisabled={isResponding}
+        />
       </div>
       <LanguageModelDisplay
         text={lastUserMsg}
