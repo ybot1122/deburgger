@@ -9,6 +9,7 @@ import { MessageBubble } from "./components/MessageBubble/MessageBubble";
 import { analyzeSentiment } from "./api/analyzeSentiment";
 import { useDeburggerBot } from "./hooks/useDeburggerBot";
 import { genericAnalysis } from "./api/genericAnalysis";
+import { queryKnowledgeBase } from "./api/queryKnowledgeBase";
 
 type Message = {
   from: "user" | "bot";
@@ -116,6 +117,11 @@ const App = () => {
         text={lastUserMsg}
         analysisCb={genericAnalysis}
         header="Generic Analysis"
+      />
+      <LanguageModelDisplay
+        text={lastUserMsg}
+        analysisCb={queryKnowledgeBase}
+        header="Query Knowledge Base"
       />
     </div>
   );
