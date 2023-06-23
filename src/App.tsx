@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { themeClass } from "./theme.css";
 import * as css from "./App.css";
@@ -10,6 +10,7 @@ import { analyzeSentiment } from "./api/analyzeSentiment";
 import { extractKeyPhrases } from "./api/extractKeyPhrases";
 import { recognizeEntities } from "./api/recognizeEntities";
 import { recognizeLinkedEntities } from "./api/recognizeLinkedEntities";
+import { useDeburggerBot } from "./hooks/useDeburggerBot";
 
 type Message = {
   from: "user" | "bot";
@@ -30,6 +31,8 @@ const App = () => {
   const [numMessages, setNumMessages] = React.useState(0);
   const [lastUserMsg, setLastUserMsg] = React.useState("");
 
+  const { onUserInput, isResponding } = useDeburggerBot();
+
   const onSubmit = React.useCallback(
     (e: any) => {
       e.preventDefault();
@@ -41,6 +44,7 @@ const App = () => {
           text: val,
           messageInd: numMessages,
         });
+        onUserInput(val);
         setLastUserMsg(val);
         setNumMessages(numMessages + 1);
         inputRef.current.value = "";
@@ -48,7 +52,7 @@ const App = () => {
 
       return false;
     },
-    [numMessages]
+    [numMessages, onUserInput]
   );
 
   // Scroll to bottom whenever new message is sent.
