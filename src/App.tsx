@@ -7,10 +7,9 @@ import { LanguageModelDisplay } from "./components/LanguageModelDisplay/Language
 import { ChatWindowUserInputSubmit } from "./components/ChatWindowUserInputSubmit/ChatWindowUserInputSubmit";
 import { MessageBubble } from "./components/MessageBubble/MessageBubble";
 import { analyzeSentiment } from "./api/analyzeSentiment";
-import { extractKeyPhrases } from "./api/extractKeyPhrases";
-import { recognizeEntities } from "./api/recognizeEntities";
-import { recognizeLinkedEntities } from "./api/recognizeLinkedEntities";
 import { useDeburggerBot } from "./hooks/useDeburggerBot";
+import { genericAnalysis } from "./api/genericAnalysis";
+import { queryKnowledgeBase } from "./api/queryKnowledgeBase";
 
 type Message = {
   from: "user" | "bot";
@@ -116,24 +115,13 @@ const App = () => {
       />
       <LanguageModelDisplay
         text={lastUserMsg}
-        analysisCb={(text) => analyzeSentiment(text, true)}
-        header="Sentiment Analysis with Opinion Mining"
+        analysisCb={genericAnalysis}
+        header="Generic Analysis"
       />
       <LanguageModelDisplay
         text={lastUserMsg}
-        analysisCb={extractKeyPhrases}
-        header="Extract Key Phrases"
-      />
-      <LanguageModelDisplay
-        text={lastUserMsg}
-        analysisCb={recognizeEntities}
-        header="Named Entity Recognition"
-      />
-
-      <LanguageModelDisplay
-        text={lastUserMsg}
-        analysisCb={recognizeLinkedEntities}
-        header="Recognize Linked Entities"
+        analysisCb={queryKnowledgeBase}
+        header="Query Knowledge Base"
       />
     </div>
   );
