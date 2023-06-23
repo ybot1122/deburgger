@@ -27,22 +27,11 @@ const analyzeSentiment = async (text: string) =>  {
 
   const results = await client.analyzeSentiment([text]);
 
-  for (let i = 0; i < results.length; i++) {
-    const result = results[i];
-    console.log(`- Document ${result.id}`);
-    if (!result.error) {
-      console.log(`\tDocument text: ${text}`);
-      console.log(`\tOverall Sentiment: ${result.sentiment}`);
-      console.log("\tSentiment confidence scores: ", result.confidenceScores);
-      console.log("\tSentences");
-      for (const { sentiment, confidenceScores, text } of result.sentences) {
-        console.log(`\t- Sentence text: ${text}`);
-        console.log(`\t  Sentence sentiment: ${sentiment}`);
-        console.log("\t  Confidence scores:", confidenceScores);
-      }
-    } else {
-      console.error(`  Error: ${result.error}`);
-    }
+  console.log(results[0])
+
+  return {
+    text,
+    ...results[0],
   }
 }
 
