@@ -49,3 +49,26 @@ export const spacer = style({
   flexBasis: "100%",
   height: "50px",
 });
+
+export const chatWindow = style({
+  display: 'flex',
+  justifyContent: 'center',
+  border: '1px black solid',
+  margin: '15px',
+  padding: '15px',
+})
+
+export const userInput = style ({
+  display: 'flex',
+  flexBasis: '100%',
+  width: '320px',
+  margin: '5px',
+  justifyContent: 'center',
+  padding: '5px'
+});
+
+export const userInputSubmit = style ({
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+});

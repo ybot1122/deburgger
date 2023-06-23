@@ -21,10 +21,12 @@ const App = () => {
     e.stopPropagation();
     if (inputRef?.current?.value) {
       setLastUserMsg(inputRef.current.value);
+      setNumMessages(numMessages + 1);
+      inputRef.current.value = "";
     }
 
     return false;
-  }, []);
+  }, [numMessages]);
 
   return (
     <div className={classNames(themeClass, css.app)}>
@@ -35,10 +37,12 @@ const App = () => {
         Deburgger - The Smartest AI When it Comes to Burgers. Not much else.
       </div>
 
+<div className={css.chatWindow}>
       <form onSubmit={onSubmit}>
-        <input type="text" ref={inputRef} />
-        <button type="submit">Submit</button>
+        <input type="text" ref={inputRef} className={css.userInput} placeholder="type message here" />
+        <button type="submit" className={css.userInputSubmit}>Submit</button>
       </form>
+</div>
       <SentimentAnalysisSection text={lastUserMsg} />
     </div>
   );
