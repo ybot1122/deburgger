@@ -9,6 +9,7 @@ import { MessageBubble } from "./components/MessageBubble/MessageBubble";
 import { analyzeSentiment } from "./api/analyzeSentiment";
 import { extractKeyPhrases } from "./api/extractKeyPhrases";
 import { recognizeEntities } from "./api/recognizeEntities";
+import { recognizeLinkedEntities } from "./api/recognizeLinkedEntities";
 
 type Message = {
   from: "user" | "bot";
@@ -88,7 +89,6 @@ const App = () => {
         analysisCb={analyzeSentiment}
         header="Sentiment Analysis"
       />
-
       <LanguageModelDisplay
         text={lastUserMsg}
         analysisCb={(text) => analyzeSentiment(text, true)}
@@ -103,6 +103,12 @@ const App = () => {
         text={lastUserMsg}
         analysisCb={recognizeEntities}
         header="Named Entity Recognition"
+      />
+
+      <LanguageModelDisplay
+        text={lastUserMsg}
+        analysisCb={recognizeLinkedEntities}
+        header="Recognize Linked Entities"
       />
     </div>
   );

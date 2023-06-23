@@ -51,9 +51,10 @@ export const spacer = style({
 });
 
 export const chatWindow = style({
+  maxWidth: "420px",
   textAlign: "center",
   border: "1px black solid",
-  margin: "15px",
+  margin: "15px auto",
   padding: "15px",
 });
 
