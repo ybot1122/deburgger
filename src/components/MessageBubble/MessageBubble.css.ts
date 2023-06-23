@@ -7,7 +7,7 @@ export const left = style({
 });
 
 export const right = style({
-  float: "right",
+  textAlign: "right",
 });
 
 export const msgInner = style({
