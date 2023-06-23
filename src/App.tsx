@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 import { themeClass } from "./theme.css";
 import * as css from "./App.css";
@@ -8,6 +8,7 @@ import { SentimentAnalysisSection } from "./components/SentimentAnalysis/Sentime
 type Message = {
   from: "user" | "bot";
   text: string;
+  messageInd: number;
 };
 
 const App = () => {
@@ -21,7 +22,13 @@ const App = () => {
       e.preventDefault();
       e.stopPropagation();
       if (inputRef?.current?.value) {
-        setLastUserMsg(inputRef.current.value);
+        const val = inputRef?.current?.value;
+        messages.current.push({
+          from: "user",
+          text: val,
+          messageInd: numMessages,
+        });
+        setLastUserMsg(val);
         setNumMessages(numMessages + 1);
         inputRef.current.value = "";
       }
@@ -30,6 +37,17 @@ const App = () => {
     },
     [numMessages]
   );
+
+  const messagesRendered = messages.current.map((m) => {
+    return (
+      <div
+        key={m.messageInd}
+        className={m.from === "user" ? css.left : css.right}
+      >
+        <div className={css.msgInner}>{m.text}</div>
+      </div>
+    );
+  });
 
   return (
     <div className={classNames(themeClass, css.app)}>
@@ -41,7 +59,7 @@ const App = () => {
       </div>
 
       <div className={css.chatWindow}>
-        <div className={css.chatMessageWindow}></div>
+        <div className={css.chatMessageWindow}>{messagesRendered}</div>
 
         <form onSubmit={onSubmit}>
           <input
