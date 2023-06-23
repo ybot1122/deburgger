@@ -5,6 +5,7 @@ import * as css from "./App.css";
 import classNames from "classnames";
 import { SentimentAnalysisSection } from "./components/SentimentAnalysis/SentimentAnalysis";
 import { ChatWindowUserInputSubmit } from "./components/ChatWindowUserInputSubmit/ChatWindowUserInputSubmit";
+import { MessageBubble } from "./components/MessageBubble/MessageBubble";
 
 type Message = {
   from: "user" | "bot";
@@ -41,12 +42,12 @@ const App = () => {
 
   const messagesRendered = messages.current.map((m) => {
     return (
-      <div
+      <MessageBubble
+        from={m.from}
+        messageInd={m.messageInd}
+        text={m.text}
         key={m.messageInd}
-        className={m.from === "user" ? css.left : css.right}
-      >
-        <div className={css.msgInner}>{m.text}</div>
-      </div>
+      />
     );
   });
 
