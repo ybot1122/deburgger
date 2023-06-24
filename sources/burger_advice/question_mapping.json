@@ -1,0 +1,44 @@
+{
+  "SOGGY_BUN": [
+    "What should I do if my bun is too soggy?",
+    "What should I do when my bun breaks?",
+    "How can I prevent my bun from being too soggy?",
+    "How can I prevent my bun from breaking?"
+  ],
+  "MESSY_CONDIMENTS": [
+    "How do I fix a burger with condiments dripping out?",
+    "Why does my burger always leak condiments?",
+    "How to a fix burger dripping its ketchup?",
+    "My burger is dripping condiments."
+  ],
+  "FALLING_APART": [
+    "My burger keeps falling apart.",
+    "How do I prevent my burger from falling apart?"
+  ],
+  "CHEESE_DISAPPEARED": [
+    "The cheese on my burger disappears",
+    "The cheese on my burger always disappears",
+    "How do I melt the cheese on my burger?"
+  ],
+  "MEAT_UNEVENLY_COOKED": [
+    "My burger does not cook evenly.",
+    "How to prevent a burger from cooking unevenly?"
+  ],
+  "BLAND_PATTY": [
+    "Why does my burger taste so bland?"
+  ],
+  "UNEVEN_PATTIES": [
+    "Why is my patty so uneven?",
+    "How to make my patty consistent thickness?"
+  ],
+  "MEATBALL": [
+    "Why is my patty turning into a meatball?"
+  ],
+  "OVERCOOKED_BURGER": [
+    "How do I prevent an overcooked burger?"
+  ],
+  "DRY_BURGER": [
+    "How do I fix a dry burger?",
+    "How do I avoid cooking a dry burger?"
+  ]
+}

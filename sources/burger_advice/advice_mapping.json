@@ -20,11 +20,13 @@
     "You might need to cover patty, so the steam can help melt the cheese."
   ],
   "MEAT_UNEVENLY_COOKED": [
-    "For burger patties not cooking evenly, make sure you let the patty reach room temperature before cooking."
+    "For burger patties not cooking evenly, make sure you let the patty reach room temperature before cooking.",
+    "If your burger is cooking unevenly, check that your patties are consistent in thickness."
   ],
   "BLAND_PATTY": [
     "If your burger patty is bland, consider adding more seasoning before and during cooking",
-    "Your patty might not have the right blend. Consider a mix of ground brisket, ground chuck, and ground short rib."
+    "Your patty might not have the right blend. Consider a mix of ground brisket, ground chuck, and ground short rib.",
+    "Store bought patties may not always have the best flavor. Try making from scratch!"
   ],
   "UNEVEN_PATTIES": [
     "Flatten the patties by pressing them ﬂat using a burger press.",
@@ -40,6 +42,7 @@
   ],
   "DRY_BURGER":[
     "When forming the patties, handle the meat as little as possible",
-    "Check the blend you are using for your patty. If it's too lean, it might become too dry."
+    "Check the blend you are using for your patty. If it's too lean, it might become too dry.",
+    "You could try the ice cube hack, which involves putting an ice cube inside your patty."
   ]
 }
