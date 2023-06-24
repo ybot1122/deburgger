@@ -4,10 +4,6 @@ import { getAnswer, shouldUseQnA } from "./handleQnA";
 
 /**
  * The main hook where the Deburgger bot constructs its responses
- *
- * @returns {
- *
- * }
  */
 const useDeburggerBot = () => {
   const [isResponding, setIsResponding] = React.useState(false);
