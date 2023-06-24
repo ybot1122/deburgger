@@ -1,6 +1,6 @@
 {
 
-  "Burger King": ["Whopper", "Whopper Jr", "Whopper Junior", "Bacon King", "Impossible Whopper", "Texas Double Whopper", "Double Whopper", "Triple Whopper", "BBQ Bacon Whopper", "Rodeo Burger"],
+  "Burger King": ["Whopper", "Whopper Jr","Whopper Jr.", "Whopper Junior", "Bacon King", "Impossible Whopper", "Texas Double Whopper", "Double Whopper", "Triple Whopper", "BBQ Bacon Whopper", "Rodeo Burger"],
 
   "Dairy Queen": [
     "Signature Stackburger",
@@ -49,7 +49,18 @@
     "Big Bacon Classic Triple",
     "Bacon Double Stack",
     "Jr. Bacon Cheeseburger",
-    "Junior Bacon Cheeseburger"
+    "Jr Bacon Cheeseburger",
+    "Junior Bacon Cheeseburger",
+    "Double Stack"
+  ],
+  "Five Guys": [
+    "Hamburger",
+    "Cheeseburger",
+    "Bacon Burger",
+    "Bacon Cheeseburger",
+    "Little Hamburger",
+    "Little Cheeseburger",
+    "Little Bacon Burger",
+    "Little Bacon Cheeseburger"
   ]
-
 }
