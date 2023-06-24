@@ -1,0 +1,55 @@
+{
+
+  "Burger King": ["Whopper", "Whopper Jr", "Whopper Junior", "Bacon King", "Impossible Whopper", "Texas Double Whopper", "Double Whopper", "Triple Whopper", "BBQ Bacon Whopper", "Rodeo Burger"],
+
+  "Dairy Queen": [
+    "Signature Stackburger",
+    "Stackburger",
+    "Stackburgers",
+    "Singature Stackburgers",
+    "FlameThrower",
+    "Backyard Bacon",
+    "Bacon Two Cheese",
+    "Two Cheese Deluxe"
+  ],
+  "In N Out": [
+    "Double Double",
+    "Double-Double"
+  ],
+  "Fatburger": [
+    "Kingburger",
+    "Double Kingburger",
+    "Triple Kingburger",
+    "Medium"
+  ],
+  "A&W": [
+    "Papa Burger",
+    "Bacon Double Cheeseburger",
+    "Original Bacon Cheeseburger"
+  ],
+  "Arby's": [
+    "Smokehouse Brisket",
+    "Classic Beef 'N Cheddar",
+    "Beef And Cheddar",
+    "Beef N Cheddar",
+    "Beef 'N Cheddar"
+  ],
+  "Wendy's": [
+    "Pretzel Bacon Pub Cheeseburger",
+    "Prerzel Bacon Pub Double",
+    "Pretzel Bacon Pub Triple",
+    "Dave's Single",
+    "Daves Single",
+    "Dave's Double",
+    "Dave's Triple",
+    "Baconator",
+    "Son of Baconator",
+    "Big Bacon Classic",
+    "Big Bacon Classic Double",
+    "Big Bacon Classic Triple",
+    "Bacon Double Stack",
+    "Jr. Bacon Cheeseburger",
+    "Junior Bacon Cheeseburger"
+  ]
+
+}
