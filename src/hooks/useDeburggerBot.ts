@@ -1,12 +1,9 @@
 import React from "react";
 import { queryKnowledgeBase } from "../api/queryKnowledgeBase";
+import { getAnswer, shouldUseQnA } from "./handleQnA";
 
 /**
  * The main hook where the Deburgger bot constructs its responses
- *
- * @returns {
- *
- * }
  */
 const useDeburggerBot = () => {
   const [isResponding, setIsResponding] = React.useState(false);
@@ -27,8 +24,8 @@ const useDeburggerBot = () => {
 
       // Check if QnA Query Returns an Answer
       const knowledgeQuery = await queryKnowledgeBase(text);
-      if (knowledgeQuery?.answers?.[0]?.confidenceScore >= 0.5) {
-        finish(knowledgeQuery.answers[0].answer);
+      if (shouldUseQnA(knowledgeQuery)) {
+        finish(getAnswer(knowledgeQuery));
         return;
       }
 
