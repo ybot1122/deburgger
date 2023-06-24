@@ -62,5 +62,60 @@
     "Little Cheeseburger",
     "Little Bacon Burger",
     "Little Bacon Cheeseburger"
+  ],
+  "Burgerville": [
+    "The No. 6 Burger",
+    "Number Six Burger",
+    "Number 6 Burger",
+    "The Number Six Burger",
+    "Northwest Cheeseburger",
+    "Colossal Burger",
+    "Bacon Cheeseburger",
+    "Double Cheeseburger"
+  ],
+  "Dick's": [
+    "Deluxe",
+    "Dick's Deluxe",
+    "Dicks Deluxe",
+    "Special",
+    "Dick's Special",
+    "Dicks Special"
+  ],
+  "Carl's Jr": [
+    "El Diablito Double",
+    "El Diablo Angus",
+    "El Diablo Single",
+    "El Diablo",
+    "El Diablo Double",
+    "El Diablito",
+    "Famous Star",
+    "Famous Star With Cheese",
+    "Beyond Famous Star With Cheese",
+    "Super Star",
+    "Super Star With Cheese",
+    "Western Bacon Cheeseburger",
+    "Double Western Bacon Cheeseburger",
+    "The Big Carl",
+    "Original Angus Burger",
+    "Guacamole Bacon Angus Burger",
+    "Jalapeno Angus Burger",
+    "California Classic Double Cheeseburger",
+    "Big Hamburger"
+  ],
+  "Jack in the Box": [
+    "Bacon Ultimate Cheeseburger",
+    "Ultimate Cheeseburger",
+    "Classic Buttery Jack",
+    "Bacon & Swiss Buttery Jack",
+    "Bacon and Swiss Buttery Jack",
+    "Sourdough Jack",
+    "Double Jack",
+    "Jumbo Jack Cheeseburger",
+    "Jumbo Jack",
+    "Jr. Jumbo Jack Cheeseburger",
+    "Junior Jumbo Jack Cheeseburger",
+    "Junior Jumbo Jack",
+    "Jr. Jumbo Jack"
   ]
+
 }
