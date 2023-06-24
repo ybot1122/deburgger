@@ -1,0 +1,1 @@
+This directory contains files that are added as sources to the Azure Language Studio.
