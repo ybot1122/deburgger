@@ -1,0 +1,48 @@
+{
+  "SOGGY_BUN": [
+      "If your bun is too soggy, try toasting the bun first. Also make sure your toppings aren't wet.",
+      "Soggy bun could be caused by too much grease on the burger.",
+      "Reduce the amount of condiments, or spread them ontop of the vegetables instead."
+  ],
+  "MESSY_CONDIMENTS": [
+    "Try pre-spreading the condiments before closing the bun.",
+    "Some people like it when their condiments spill over. Maybe it's just your style of burger?",
+    "You might be putting too much. Remember, a tablespoon goes a long way."
+  ],
+  "FALLING_APART": [
+    "If your burger always falls apart, try using a toothpick or skewer to hold it together.",
+    "Sometimes if there's simply too much in the burger, it will fall apart.",
+    "You can try using the cheese as a 'glue', strategically placing it where it will hold loose toppings together."
+  ],
+  "CHEESE_DISAPPEARED": [
+    "Make sure you have the right type of cheese, some cheeses do not melt as well as others.",
+    "If you cook the cheese too long, it will simply evaporate away.",
+    "You might need to cover patty, so the steam can help melt the cheese."
+  ],
+  "MEAT_UNEVENLY_COOKED": [
+    "For burger patties not cooking evenly, make sure you let the patty reach room temperature before cooking.",
+    "If your burger is cooking unevenly, check that your patties are consistent in thickness."
+  ],
+  "BLAND_PATTY": [
+    "If your burger patty is bland, consider adding more seasoning before and during cooking",
+    "Your patty might not have the right blend. Consider a mix of ground brisket, ground chuck, and ground short rib.",
+    "Store bought patties may not always have the best flavor. Try making from scratch!"
+  ],
+  "UNEVEN_PATTIES": [
+    "Flatten the patties by pressing them ﬂat using a burger press.",
+    "Put a little thumbprint in the middle of the patty once it's formed, and it will prevent the patties from balling up during the cooking process."
+  ],
+  "MEATBALL": [
+    "Make the patty bigger and wider, to account for the shrinkage that will happen during cooking.",
+    "Pressing a shallow dimple”in the patty is the best way to avoid shrinking and domed burgers."
+  ],
+  "OVERCOOKED_BURGER": [
+    "Allow the beef patty to rest at least a couple of minutes after cooking. Some blood and juices will drip away.",
+    "Resting is very important when grilling a burger. Give your burger the chance to collect and re-distribute juices throughout the patty."
+  ],
+  "DRY_BURGER":[
+    "When forming the patties, handle the meat as little as possible",
+    "Check the blend you are using for your patty. If it's too lean, it might become too dry.",
+    "You could try the ice cube hack, which involves putting an ice cube inside your patty."
+  ]
+}
